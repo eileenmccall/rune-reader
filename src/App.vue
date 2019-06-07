@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <footer>Built by <a class="link" href="http://github.com/sophiemccall">Sophie McCall</a></footer>
+    <Footer />
   </div>
 </template>
 
 <script>
-
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'app',
+  components: {
+    Footer
+  }
 }
 </script>
 
@@ -36,17 +39,5 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Skranji', cursive;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 25px;
-}
-
-.link {
-  text-decoration: none;
-  color: white;
 }
 </style>
