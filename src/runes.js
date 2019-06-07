@@ -1,155 +1,127 @@
-export const runeNames = [
-    'Fehu',
-    'Uruz',
-    'Thurisaz',
-    'Ansuz',
-    'Raido',
-    'Kaunan',
-    'Gebo',
-    'Wunjo',
-    'Hagalaz',
-    'Naudiz',
-    'Isaz',
-    'Jera',
-    'Ihwaz',
-    'Perth',
-    'Algiz',
-    'Sowilo',
-    'Tiwaz',
-    'Berkanan',
-    'Ehwaz',
-    'Mannaz',
-    'Laguz',
-    'Ingwaz',
-    'Othalan',
-    'Dagaz',
-    'Odin'
-];
-
 export const runes = [
     {
         id: 0,
-        name: 'fehu',
+        name: 'Fehu',
         meaning: 'wealth, cattle',
         ipa: '[f]'
     }, {
         id: 1,
-        name: 'uruz',
+        name: 'Uruz',
         meaning: 'aurochs',
         ipa: '[u(ː)]'
     }, {
         id: 2,
-        name: 'thurisaz',
+        name: 'Thurisaz',
         meaning: 'the god Thor, giant',
         ipa: '[θ], [ð]'
     }, {
         id: 3,
-        name: 'ansuz',
+        name: 'Ansuz',
         meaning: 'god',
         ipa: '[a(ː)]'
     }, {
         id: 4,
-        name: 'raido',
+        name: 'Raido',
         meaning: 'ride, journey',
         ipa: '[r]'
     }, {
         id: 5,
-        name: 'kaunan',
+        name: 'Kaunan',
         meaning: 'ulcer, torch',
         ipa: '[k]'
     }, {
         id: 6,
-        name: 'gebo',
+        name: 'Gebo',
         meaning: 'gift',
         ipa: '[ɣ]'
     }, {
         id: 7,
-        name: 'wunjo',
+        name: 'Wunjo',
         meaning: 'joy',
         ipa: '[w]'
     }, {
         id: 8,
-        name: 'hagalaz',
+        name: 'Hagalaz',
         meaning: 'hail',
         ipa: '[h]'
     }, {
         id: 9,
-        name: 'naudiz',
+        name: 'Naudiz',
         meaning: 'need',
         ipa: '[n]'
     }, {
         id: 10,
-        name: 'isaz',
+        name: 'Isaz',
         meaning: 'ice',
         ipa: '[i(ː)]'
     }, {
         id: 11,
-        name: 'jera',
+        name: 'Jera',
         meaning: 'year, good year, harvest',
         ipa: '[j]'
     }, {
         id: 12,
-        name: 'ihwaz',
+        name: 'Ihwaz',
         meaning: 'yew tree',
         ipa: '[æː]'
     }, {
         id: 13,
-        name: 'perth',
+        name: 'Perth',
         meaning: 'pear tree(?)',
         ipa: '[p]'
     }, {
         id: 14,
-        name: 'algiz',
+        name: 'Algiz',
         meaning: 'protection, shielding',
         ipa: '[z]'
     }, {
         id: 15,
-        name: 'sowilo',
+        name: 'Sowilo',
         meaninig: 'sun',
         ipa: '[s]'
     }, {
         id: 16,
-        name: 'tiwaz',
+        name: 'Tiwaz',
         meaning: 'the god Tyr, sacrifice',
         ipa: '[t]'
     }, {
         id: 17,
-        name: 'berkanan',
+        name: 'Berkanan',
         meaning: 'the birch tree',
         ipa: '[b]'
     }, {
         id: 18,
-        name: 'ehwaz',
+        name: 'Ehwaz',
         meaning: 'horse',
         ipa: '[e(ː)]'
     }, {
         id: 19,
-        name: 'mannaz',
+        name: 'Mannaz',
         meaning: 'man',
         ipa: '[m]',
     }, {
         id: 20,
-        name: 'laguz',
+        name: 'Laguz',
         meaning: 'water, lake',
         ipa: '[l]'
     }, {
         id: 21,
-        name: 'ingwaz',
+        name: 'Ingwaz',
         meaning: 'the god Yngvi',
         ipa: '[ŋ]'
     }, {
         id: 22,
-        name: 'othalan',
+        name: 'Othalan',
         meaning: 'heritage, estate',
         ipa: '[o(ː)]'
     }, {
         id: 23,
-        name: 'dagaz',
+        name: 'Dagaz',
         meaning: 'day',
         ipa: '[d]'
     }, {
         id: 24,
-        name: 'odin',
+        name: 'Odin',
         meaning: 'void, unknown, abyss',
         ipa: 'n/a'
     }
