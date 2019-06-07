@@ -12,7 +12,7 @@ export const runes = [
     }, {
         id: 2,
         name: 'Thurisaz',
-        meaning: 'the god Thor, giant',
+        meaning: 'Thor, giant',
         ipa: '[θ], [ð]'
     }, {
         id: 3,
@@ -82,12 +82,12 @@ export const runes = [
     }, {
         id: 16,
         name: 'Tiwaz',
-        meaning: 'the god Tyr, sacrifice',
+        meaning: 'Tyr, sacrifice',
         ipa: '[t]'
     }, {
         id: 17,
         name: 'Berkanan',
-        meaning: 'the birch tree',
+        meaning: 'birch tree',
         ipa: '[b]'
     }, {
         id: 18,
