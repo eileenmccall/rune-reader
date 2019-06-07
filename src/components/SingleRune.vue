@@ -1,17 +1,22 @@
 <template>
-    <div id="singleRune">
-        <h1>Your rune is...</h1>
-        <div class="glyph fs1">
-            <svg :class="`icon icon-${selectedRune}`"><use :xlink:href="`#icon-${selectedRune}`"></use></svg>
-            <h3 class="rune-name">{{ selectedRune }}</h3>
-        </div>
-        <button class="button" v-on:click="selectRune">Select New</button>
-        <router-link class="router-link back-button" to="/">Go Back</router-link>
+  <div id="singleRune">
+    <h1>Your rune is...</h1>
+
+    <div class="rune">
+      <svg :class="`icon icon-${rune.name}`"><use :xlink:href="`#icon-${rune.name}`"></use></svg>
+      <h3 class="rune__name">{{ rune.name }}</h3>
+      <p class="rune__meaning"><span class="rune__meaning__title">Meaning: </span>{{ rune.meaning }}</p>
+      <p class="rune__ipa"><span class="rune__ipa__title">Pronunciation: </span>{{ rune.ipa }}</p>
     </div>
+
+    <button class="button" v-on:click="selectRune">Select New</button>
+
+    <router-link class="router-link back-button" to="/">Go Back</router-link>
+  </div>
 </template>
 
 <script>
-import {runeNames} from '../runes';
+import {runes} from '../runes';
 
 export default {
     name: 'SingleRune',
@@ -22,15 +27,14 @@ export default {
 
     data() {
         return {
-            runeNames,
-            selectedRune: ''
+          rune: {}
         }
     },
 
     methods: {
         selectRune() {
-            const num = Math.floor(Math.random() * 25);
-            this.selectedRune = this.runeNames[num];
+            const id = Math.floor(Math.random() * 25);
+            this.rune = runes[id];
         }
     }
 }
@@ -38,9 +42,14 @@ export default {
 
 <style scoped>
 
-.glyph {
-    margin-top: 50px;
-    margin-bottom: 50px;
+.rune {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.rune__meaning__title,
+.rune__ipa__title {
+  font-weight: bold;
 }
 
 .button {
