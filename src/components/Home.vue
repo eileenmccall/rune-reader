@@ -1,38 +1,37 @@
 <template>
-    <div id="home">
-        <h1>Online Rune Reader</h1>
-        <div class="glyph fs1">
-            <svg :class="`icon icon-${currentImage}`"><use :xlink:href="`#icon-${currentImage}`"></use></svg>
-            <h3 class="rune-name">{{ currentImage }}</h3>
-        </div>
-        <div class="button-container">
-            <button class="button active">
-              <router-link class="router-link" to="/draw">
-                Draw a rune
-              </router-link>
-            </button>
-            <span class="button-text">OR</span>
-            <button disabled class="button disabled">Choose a spread</button>
-        </div>
+  <div id="home">
+    <h1>Online Rune Reader</h1>
+    <div class="glyph fs1">
+      <svg :class="`icon icon-${currentImage}`">
+        <use :xlink:href="`#icon-${currentImage}`"></use>
+      </svg>
+      <h3 class="rune-name">{{ currentImage }}</h3>
     </div>
-    
+    <div class="button-container">
+      <router-link class="router-link" to="/draw">
+        <button class="button button--enabled">Draw a rune</button>
+      </router-link>
+      <span class="button-text">OR</span>
+      <button disabled class="button button--disabled">Choose a spread</button>
+    </div>
+  </div>
 </template>
 
 <script>
-import { runes } from '../runes';
-import { setInterval } from 'timers';
+import { runes } from "../runes";
+import { setInterval } from "timers";
 
 export default {
-    name: 'Home',
+  name: "Home",
 
-    mounted: function() {
-        this.startRotation();
-    },
+  mounted: function() {
+    this.startRotation();
+  },
 
   data() {
     return {
       current: 0
-    }
+    };
   },
 
   methods: {
@@ -45,13 +44,15 @@ export default {
 
   computed: {
     currentImage: function() {
-      return `${runes[this.current].name}`
+      return `${runes[this.current].name}`;
     }
   }
-}
+};
 </script>
 
 <style scoped>
+@import "../styles/button.css";
+
 .rune-name {
   margin-top: 16px;
 }
@@ -63,43 +64,12 @@ export default {
   align-items: center;
 }
 
-.button {
-  display: inline-block;
-  color: white;
-  border: 1px solid white;
-  border-radius: 4px;
-  font-family: 'Skranji', cursive;
-  font-size: 18px;
-  background: transparent;
-  padding: 15px;
-  width: 180px;
-}
-
-.active:hover {
-  background-color: white;
-  color: #262937;
-  cursor: pointer;
-}
-
-.disabled {
-  border-color: gray;
-  color: gray;
-}
-
-.router-link {
-  color: white;
-}
-
-.button:hover .router-link {
-  color: #262937;
-}
-
 .button:not(:first-child) {
   margin-left: 15px;
 }
 
 .button-text {
-  font-family: 'Skranji', cursive;
+  font-family: "Skranji", cursive;
   color: white;
   margin-left: 15px;
 }
@@ -113,37 +83,77 @@ export default {
 }
 
 @keyframes fadein {
-  0% { opacity: 0; }
-  25%   { opacity: 1; }
-  75% { opacity: 1; }
-  100%   { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @-moz-keyframes fadein {
-  0% { opacity: 0; }
-  25%   { opacity: 1; }
-  75% { opacity: 1; }
-  100%   { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes fadein {
-  0% { opacity: 0; }
-  25%   { opacity: 1; }
-  75% { opacity: 1; }
-  100%   { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @-ms-keyframes fadein {
-  0% { opacity: 0; }
-  25%   { opacity: 1; }
-  75% { opacity: 1; }
-  100%   { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @-o-keyframes fadein {
-  0% { opacity: 0; }
-  25%   { opacity: 1; }
-  75% { opacity: 1; }
-  100%   { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 </style>
