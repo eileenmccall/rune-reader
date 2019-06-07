@@ -6,13 +6,13 @@
             <h3 class="rune-name">{{ currentImage }}</h3>
         </div>
         <div class="button-container">
-            <button class="button">
+            <button class="button active">
               <router-link class="router-link" to="/draw">
                 Draw a rune
               </router-link>
             </button>
             <span class="button-text">OR</span>
-            <button class="button">Choose a spread</button>
+            <button disabled class="button disabled">Choose a spread</button>
         </div>
     </div>
     
@@ -76,10 +76,15 @@ export default {
   width: 180px;
 }
 
-.button:hover {
+.active:hover {
   background-color: white;
   color: #262937;
   cursor: pointer;
+}
+
+.disabled {
+  border-color: gray;
+  color: gray;
 }
 
 .router-link {
