@@ -3,8 +3,9 @@
     <h1>Online Rune Reader</h1>
     <div class="glyph fs1">
       <div class="clearfix pbs">
-        <svg :class="`icon ${currentImage}`"><use :xlink:href="`#${currentImage}`"></use></svg>
+        <svg :class="`icon icon-${currentImage}`"><use :xlink:href="`#icon-${currentImage}`"></use></svg>
       </div>
+      <h3 class="rune-name">{{ currentImage }}</h3>
     </div>
   </div>
 </template>
@@ -37,7 +38,7 @@ export default {
 
   computed: {
     currentImage: function() {
-      return `icon-${this.runeNames[this.current]}`
+      return `${this.runeNames[this.current]}`
     }
   }
 }
@@ -63,6 +64,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Skranji', cursive;
   margin-top: 0;
+}
+
+.rune-name {
+  margin-top: 16px;
 }
 
 .glyph {
