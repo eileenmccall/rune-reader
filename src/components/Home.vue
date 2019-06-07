@@ -6,7 +6,11 @@
             <h3 class="rune-name">{{ currentImage }}</h3>
         </div>
         <div class="button-container">
-            <button class="button">Draw a rune</button>
+            <button class="button">
+              <router-link class="router-link" to="/draw">
+                Draw a rune
+              </router-link>
+            </button>
             <span class="button-text">OR</span>
             <button class="button">Choose a spread</button>
         </div>
@@ -48,7 +52,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .rune-name {
   margin-top: 16px;
 }
@@ -76,6 +80,14 @@ export default {
   background-color: white;
   color: #262937;
   cursor: pointer;
+}
+
+.router-link {
+  color: white;
+}
+
+.button:hover .router-link {
+  color: #262937;
 }
 
 .button:not(:first-child) {
