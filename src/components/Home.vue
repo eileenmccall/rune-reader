@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { runeNames } from '../runes';
+import { runes } from '../runes';
 import { setInterval } from 'timers';
 
 export default {
@@ -31,7 +31,6 @@ export default {
 
   data() {
     return {
-      runeNames,
       current: 0
     }
   },
@@ -39,14 +38,14 @@ export default {
   methods: {
     startRotation: function() {
       setInterval(() => {
-        this.current = this.current === this.runeNames.length - 1 ? 0 : this.current + 1;
+        this.current = this.current === runes.length - 1 ? 0 : this.current + 1;
       }, 3000);
     }
   },
 
   computed: {
     currentImage: function() {
-      return `${this.runeNames[this.current]}`
+      return `${runes[this.current].name}`
     }
   }
 }
