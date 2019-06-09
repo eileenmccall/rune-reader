@@ -1,8 +1,14 @@
 export const spreads = [
   {
-    image: "five-lifetimes-spread.svg",
-    name: "Five Lifetimes Spread",
+    image: "three-rune-spread.svg",
+    name: "Three Rune Spread",
     description:
-      "Link in a chain forever rattling through 'cause the building had to come down no no body's warmer to the touch than hers but you'll never. Have i got something swell that i'll tell to you though they seem to darken as i go that couldn't just as well be sent. But we'll get by you are, you are, you are to me i blow it off."
+      "The number 'three.' figures prominently in the divinatory practices of the ancients. The Three Rune Spread which, according to Tacitus, was already in use 2,000 years ago, is satisfactory for all but the most extended and intricate readings."
+  },
+  {
+    image: "three-lifetimes-spread.svg",
+    name: "Three Lifetimes Spread",
+    description:
+      "This spread is for those who wish to experiment with the Idea of reincarnation. It furnishes a three level perspective on your passage, and is laid out in the form of the Rune of Fertility, Inguz. The Runes represent 1 Birth and childhood conditions, 2 Your present, 3 Future in this life, 4 Past incarnation and 5 Future incarnation. "
   }
 ];

@@ -1,13 +1,12 @@
 <template>
   <div id="spread">
-    <div class="spread-diagram">
-      <img :src="JSON.stringify({url: require('@/assets/five-lifetimes-spread.svg')})">
+    <div class="diagram">
+      <img class="diagram__image" :src="imageUrl">
     </div>
-
-    <div class="spread-info">
-      <h2>{{ name }}</h2>
-      <p>{{ description }}</p>
-      <button class="button button--enabled">Choose this spread</button>
+    <div class="info">
+      <h2 class="info__title">{{ name }}</h2>
+      <p class="info__description">{{ description }}</p>
+      <button class="button button--enabled info__button">Choose this spread</button>
     </div>
   </div>
 </template>
@@ -23,8 +22,8 @@ export default {
   },
 
   computed: {
-    imageUrl() {
-      return `@/assets/${this.image}`;
+    imageUrl: function() {
+      return require(`../assets/${this.image}`);
     }
   }
 };
@@ -35,24 +34,36 @@ export default {
 
 #spread {
   display: flex;
+  margin-bottom: 75px;
+  align-items: center;
 }
 
 .spread {
   display: flex;
 }
 
-.spread-diagram {
-  max-height: 300px;
-  width: 300px;
+.diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  max-width: 250px;
+  flex-shrink: 0;
 }
 
-.spread-diagram img {
+.diagram__image {
   max-height: 100%;
+  max-width: 100%;
 }
 
-.spread-info {
+.info {
   display: inline-block;
   padding-left: 25px;
   text-align: left;
+}
+
+.info__title {
+  margin-top: 0;
 }
 </style>

@@ -1,13 +1,18 @@
 <template>
   <div id="spreads">
-    <h1>Spreads</h1>
-    <Spread
-      v-for="spread in spreads"
-      :key="spread.name"
-      :name="spread.name"
-      :image="spread.image"
-      :description="spread.description"
-    />
+    <router-link to="/" class="link">
+      <h3>&lt;- Back</h3>
+    </router-link>
+    <main class="main">
+      <h1>Spreads</h1>
+      <Spread
+        v-for="spread in spreads"
+        :key="spread.name"
+        :name="spread.name"
+        :image="spread.image"
+        :description="spread.description"
+      />
+    </main>
   </div>
 </template>
 
@@ -37,5 +42,13 @@ export default {
   width: 900px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+h3 {
+  text-align: left;
+}
+
+.link {
+  color: white;
 }
 </style>

@@ -12,7 +12,9 @@
         <button class="button button--enabled">Draw a rune</button>
       </router-link>
       <span class="button-text">OR</span>
-      <button disabled class="button button--disabled">Choose a spread</button>
+      <router-link class="router-link" to="/spreads">
+        <button class="button button--enabled">Choose a spread</button>
+      </router-link>
     </div>
   </div>
 </template>
@@ -64,7 +66,7 @@ export default {
   align-items: center;
 }
 
-.button:not(:first-child) {
+.router-link:not(:first-child) {
   margin-left: 15px;
 }
 
