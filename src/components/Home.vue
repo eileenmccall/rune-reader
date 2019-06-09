@@ -55,8 +55,15 @@ export default {
 <style scoped>
 @import "../styles/button.css";
 
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .rune-name {
   margin-top: 16px;
+  text-align: center;
 }
 
 .button-container {

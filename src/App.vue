@@ -1,19 +1,22 @@
 <template>
   <div id="app">
+    <Header/>
     <router-view></router-view>
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Footer from './components/Footer.vue';
+import Footer from "./components/Footer.vue";
+import Header from "./components/Header.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
+    Header,
     Footer
   }
-}
+};
 </script>
 
 <style>
@@ -28,17 +31,23 @@ body {
 }
 
 #app {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: white;
-  padding-top: 100px;
   height: 100%;
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Skranji', cursive;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Skranji", cursive;
 }
 
 .router-link {
