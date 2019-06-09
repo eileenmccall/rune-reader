@@ -1,10 +1,12 @@
 <template>
   <div id="spreads">
-    <router-link to="/" class="link">
-      <h3>&lt;- Back</h3>
-    </router-link>
     <main class="main">
-      <h1>Spreads</h1>
+      <div class="top-row">
+        <router-link to="/" class="link">
+          <h3 class="link__text">&lt;- Back</h3>
+        </router-link>
+        <h1 class="title">Spreads</h1>
+      </div>
       <Spread
         v-for="spread in spreads"
         :key="spread.name"
@@ -44,11 +46,25 @@ export default {
   margin: 0 auto;
 }
 
-h3 {
-  text-align: left;
+.top-row {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .link {
   color: white;
+}
+
+.link__text {
+  display: inline-block;
+  margin: 0;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
 }
 </style>
